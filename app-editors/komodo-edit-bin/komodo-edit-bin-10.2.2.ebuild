@@ -24,14 +24,14 @@ IUSE="pax_kernel"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-    virtual/jpeg
-    virtual/libc
-    x11-libs/gtk+
-    x11-libs/pango
-    x11-base/xorg-server
-    x11-libs/gdk-pixbuf
-    gnome-base/libgnomeui
-    gnome-base/libgnome"
+	virtual/jpeg
+	virtual/libc
+	x11-libs/gtk+
+	x11-libs/pango
+	x11-base/xorg-server
+	x11-libs/gdk-pixbuf
+	gnome-base/libgnomeui
+	gnome-base/libgnome"
 
 RESTRICT="mirror"
 
@@ -42,7 +42,7 @@ QA_PRESTRIPPED="*"
 S="${WORKDIR}/Komodo-Edit-${PV}-${MY_BUILD}-linux-${ARCH/amd64/x86_64}"
 
 src_install() {
-    if use pax_kernel; then
+	if use pax_kernel; then
 		pax-mark m "${S}"/INSTALLDIR/lib/mozilla/komodo
 	fi
 
