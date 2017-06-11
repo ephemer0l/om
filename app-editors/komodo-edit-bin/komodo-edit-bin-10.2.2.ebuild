@@ -18,7 +18,7 @@ SRC_URI="x86?	( http://downloads.activestate.com/Komodo/releases/${PV}/Komodo-Ed
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-RESTRICT="strip"
+RESTRICT="strip mirror"
 
 IUSE="pax_kernel"
 
@@ -50,14 +50,7 @@ src_install() {
 	doins -r "${S}"/INSTALLDIR/share
 	mv "${S}"/INSTALLDIR/lib "${ED}opt/${PN}/" || die "Installation failed"
 
-	# install the wrapper script
-	dodir /usr/bin
-	cat <<EOF >"${ED}usr/bin/komodo" ||die "could not create wrapper"
-#!/bin/sh
-LD_LIBRARY_PATH="${EPREFIX}/opt/${PN}/lib/mozilla" \
-exec ${EPREFIX}/opt/${PN}/lib/mozilla/komodo $@
-EOF
-	fperms 0755 /usr/bin/komodo
+	make_wrapper komodo ${EPREFIX}/opt/${PN}/lib/mozilla/komodo ${EPREFIX}/opt/${PN}/lib/mozilla /usr/bin
 
 	doicon "${S}/INSTALLDIR/share/icons/komodo48.png"
 
