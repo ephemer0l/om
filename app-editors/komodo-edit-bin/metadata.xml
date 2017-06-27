@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer type="person">
-<email>gentoo@organizedmagnetism.com</email>
+<name>Scott Martin</name>
+<email>github@organizedmagnetism.com</email>
 </maintainer>
 <longdescription lang="en">
 </longdescription>

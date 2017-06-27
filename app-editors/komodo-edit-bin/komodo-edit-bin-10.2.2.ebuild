@@ -10,7 +10,18 @@ MY_BUILD="17703"
 
 DESCRIPTION="Freeware advanced editor for dynamic and Web languages"
 HOMEPAGE="http://www.activestate.com/products/komodo_edit"
-LICENSE="MPL-1.1"
+LICENSE="MPL-1.1
+	MIT
+	Boost-1.0
+	CC-BY-2.5
+	CC-BY-3.0
+	SilverCity
+	LGPL-2.1
+	LGPL-3
+	PSF-2
+	Apache-2.0
+	OFL-1.1
+"
 
 SRC_URI="x86?	( http://downloads.activestate.com/Komodo/releases/${PV}/Komodo-Edit-${PV}-${MY_BUILD}-linux-x86.tar.gz )
 	 amd64? ( http://downloads.activestate.com/Komodo/releases/${PV}/Komodo-Edit-${PV}-${MY_BUILD}-linux-x86_64.tar.gz )"
